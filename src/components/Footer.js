@@ -42,30 +42,30 @@ return (
 
         <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <h6 className="text-uppercase fw-bold mb-4">
-            <i className="fas fa-gem me-3"></i>Company name
+            <i className="fas fa-gem me-3"></i>GET SRC
           </h6>
           <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
+            Get SRC is all about, make the findings eaisier. 
+            get latest technology project from GET SRC
           </p>
         </div>
 
         <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
          
           <h6 className="text-uppercase fw-bold mb-4">
-            Products
+            Projectes 
           </h6>
           <p>
-            <a href="\" className="text-reset">Angular</a>
+            <a href="\" className="text-reset">Python</a>
           </p>
           <p>
-            <a href="\" className="text-reset">React</a>
+            <a href="\" className="text-reset">Java</a>
           </p>
           <p>
-            <a href="\" className="text-reset">Vue</a>
+            <a href="\" className="text-reset">JavaScript</a>
           </p>
           <p>
-            <a href="\" className="text-reset">Laravel</a>
+            <a href="\" className="text-reset">Php</a>
           </p>
         </div>
 
@@ -75,29 +75,27 @@ return (
             Useful links
           </h6>
           <p>
-            <a href="\" className="text-reset">Pricing</a>
+            <a href="https://www.instagram.com/getsrcstudio" className="text-reset"><i class="fa fa-instagram" aria-hidden="true"></i>instagram</a>
           </p>
           <p>
-            <a href="\" className="text-reset">Settings</a>
+            <a href="https://www.linkedin.com/in/getsrcstudio" className="text-reset"><i class="fa fa-linkedin" aria-hidden="true"></i>linkedin</a>
           </p>
           <p>
-            <a href="\" className="text-reset">Orders</a>
+            <a href="https://www.youtube.com/@getsrcstudio" className="text-reset"><i class="fa fa-youtube-play" aria-hidden="true"></i>youtube</a>
           </p>
-          <p>
-            <a href="\" className="text-reset">Help</a>
-          </p>
+          
         </div>
 
         <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
         
           <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
-          <p><i className="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          
           <p>
             <i className="fas fa-envelope me-3"></i>
-            info@example.com
+            getsrc.info@gmail.com
           </p>
-          <p><i className="fas fa-phone me-3"></i> + 01 234 567 88</p>
-          <p><i className="fas fa-print me-3"></i> + 01 234 567 89</p>
+          <p><i className="fas fa-phone me-3"></i> 9654614112</p>
+          <p><i className="fas fa-print me-3"></i> 8750687107</p>
         </div>
     
       </div>
@@ -107,8 +105,8 @@ return (
 
 
   <div className="text-center p-4" style={{backgroundColor:"rgba(0, 0, 0, 0.05)"}}>
-    © 2021 Copyright:
-    <a className="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    © 2023 Copyright:
+    <a className="text-reset fw-bold" href="https://mdbootstrap.com/">getsrc.tech</a>
   </div>
 
 </footer>
