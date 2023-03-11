@@ -105,8 +105,8 @@ return (
 
 
   <div className="text-center p-4" style={{backgroundColor:"rgba(0, 0, 0, 0.05)"}}>
-    © 2023 Copyright:
-    <a className="text-reset fw-bold" href="https://mdbootstrap.com/">getsrc.tech</a>
+     © {new Date().getFullYear()} Copyright:
+    <a className="text-reset fw-bold" href="https://getsrc.tech/">getsrc.tech</a>
   </div>
 
 </footer>
