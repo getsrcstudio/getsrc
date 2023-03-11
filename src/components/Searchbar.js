@@ -1,82 +1,78 @@
-import React from "react";
+import React, { useState, useRef, useCallback } from "react";
 import Showcase from "./Showcase";
-export let SearchMe =async ()=> {
-    let topic = document.getElementById("Project_name").value;
-    let language = document.getElementById("language").value;
-  let sort = "stars";
-  let order = "desc";
-
-    let url1="https://api.github.com/search/repositories";
-    let  queryString = `?q=topic:${topic}+language:${language}&sort=${sort}&order=${order}`;
-    const url = url1 + queryString;
-   let response = await fetch(url, { 
-     method: "GET",
-   });
-   
-   let data = await response.text();
- //  var count = Object.keys(data).length;
-    
-//    let count2=count-10;
-
-    // console.log(data.items[0].full_name)
-//     <div className="mx-3 my=3">
-//     <div className='card' style={{width: "18rem"}}>
-//   <img src={image} className="card-img-top" alt=""/>
-//   <div className="card-body">
-//     <h5 className="card-title">{data.items[0].full_name}</h5>
-//     <p className="card-text">{data.items[0].description}</p>
-//     <a href="/" className="btn btn-primary">show me more</a>
-//   </div>
-// </div>
-// </div>
-
-Showcase(data);
-
-  
-}
-
-
 
 export default function Searchbar() {
-  return (
-    <div className="container">
-      <div className="my-3">
-        <h2>Find my Project</h2>
-      </div>
-      <div className="row">
-        <div className="col-auto">
-          <label className="form-check-label" for="Project_name">
-            Project Name
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="library management"
-            id="Project_name"
-          />
-        </div>
+  const [data, setData] = useState(null);
+  const projectRef = useRef(null);
+  const languageRef = useRef(null);
+  const orderRef = useRef(null);
 
-        <div className="col-auto">
-          <label className="form-check-label" for="language">
-            Language
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            placeholder=".net,java,php,js,python"
-            id="language"
-          />
+  const SearchMe = useCallback(async () => {
+    const topic = projectRef.current.value;
+    const language = languageRef.current.value;
+    const sort = "stars";
+    const order = orderRef.current.value;
+    const url = `https://api.github.com/search/repositories?q=topic:${topic}+language:${language}&sort=${sort}&order=${order}`;
+
+    const response = await fetch(url, {
+      method: "GET",
+    });
+    const data = await response.json();
+    setData(data);
+  }, []);
+
+  return (
+    <div className="container my-4">
+      <h2 className="text-center mb-3">Find my Project</h2>
+      <form>
+        <div className="row mb-3">
+          <div className="col-sm-6">
+            <label htmlFor="project-name" className="sr-only">
+              Project Name
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="project-name"
+              placeholder="library management"
+              ref={projectRef}
+            />
+          </div>
+          <div className="col-sm-3">
+            <label htmlFor="language" className="sr-only">
+              Language
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="language"
+              placeholder=".net,java,php,js,python"
+              ref={languageRef}
+            />
+          </div>
+          <div className="col-sm-3">
+            <label htmlFor="order" className="sr-only">
+              Order By
+            </label>
+            <select className="form-control" id="order" ref={orderRef}>
+              <option value="desc">Descending</option>
+              <option value="asc">Ascending</option>
+            </select>
+          </div>
         </div>
-        <div className="col-auto my-4">
-          <button
-            type="submit"
-            className="form-control btn btn-primary mb-3"
-            onClick={SearchMe}
-          >
-            Search
-          </button>
+        <div className="row justify-content-center">
+          <div className="col-sm-6">
+            <button
+              type="button"
+              className="btn btn-primary btn-block"
+              onClick={SearchMe}
+            >
+              Search
+            </button>
+          </div>
         </div>
-      </div>
+      </form>
+      <div className="result">{data && <Showcase data={data} />}</div>
     </div>
   );
 }
