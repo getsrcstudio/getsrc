@@ -12,7 +12,7 @@ export default function Searchbar() {
     const language = languageRef.current.value;
     const sort = "stars";
     const order = orderRef.current.value;
-    const url = `https://api.github.com/search/repositories?q=topic:${topic}+language:${language}&sort=${sort}&order=${order}`;
+    const url = `https://api.github.com/search/repositories?q=${topic}+language:${language}&sort=${sort}&order=${order}`;
 
     const response = await fetch(url, {
       method: "GET",
