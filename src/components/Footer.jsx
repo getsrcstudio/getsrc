@@ -106,7 +106,7 @@ return (
 
   <div className="text-center p-4" style={{backgroundColor:"rgba(0, 0, 0, 0.05)"}}>
     © 2023 Copyright:
-    <a className="text-reset fw-bold" href="https://mdbootstrap.com/">getsrc.tech</a>
+    <a className="text-reset fw-bold" href="www.getsrc.tech">getsrc.tech</a>
   </div>
 
 </footer>
