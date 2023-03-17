@@ -52,10 +52,8 @@ const Showcase = ({ data }) => {
                 <div className="mt-auto">
                   
                   <a
-                    href={"/Project/"+element.full_name/*element.html_url*/}
-                    
+                    href={"/Project/?search="+element.full_name}
                     className="btn btn-primary btn-sm"
-                    
                     rel="noopener noreferrer"
                   >
                     View

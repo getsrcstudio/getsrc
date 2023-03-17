@@ -2,7 +2,7 @@ import "./App.css";
 import Searchbar from "./components/Searchbar.jsx";
 //import Navbar from "./components/Navbar";
 //import Footer from "./components/Footer";
-import Project from "./Project";
+import Project from "./components/Project";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 function App() {
