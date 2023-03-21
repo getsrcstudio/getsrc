@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import React, { useState } from "react";
-//import Project from "./Project";
 
 const Showcase = ({ data }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -50,9 +49,8 @@ const Showcase = ({ data }) => {
                 <h5 className="card-title">{element.full_name}</h5>
                 <p className="card-text text-truncate">{element.description}</p>
                 <div className="mt-auto">
-                  
                   <a
-                    href={"/Project/?search="+element.full_name}
+                    href={"/Project?search=" + element.full_name}
                     className="btn btn-primary btn-sm"
                     rel="noopener noreferrer"
                   >
@@ -60,14 +58,16 @@ const Showcase = ({ data }) => {
                   </a>
                   <span>&nbsp;&nbsp;</span>
                   <a
-                    href={"https://www.youtube.com/@GetSRCstudio/search?query="+element.full_name}
+                    href={
+                      "https://www.youtube.com/@GetSRCstudio/search?query=" +
+                      element.full_name
+                    }
                     className="btn btn-primary btn-sm"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Youtube
                   </a>
-                  
                 </div>
               </div>
             </div>
