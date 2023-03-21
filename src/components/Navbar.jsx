@@ -27,7 +27,7 @@ export default function Navbar(props) {
           {props.title}
         </a>
         <button
-          className="navbar-toggler"
+          className="nav navbar-toggler "
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -37,8 +37,8 @@ export default function Navbar(props) {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+        <div className="nav collapse navbar-collapse " id="navbarSupportedContent">
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 ">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="/">
                 Home
@@ -49,6 +49,7 @@ export default function Navbar(props) {
                 About
               </a>
             </li>
+           
           </ul>
         </div>
       </div>
